@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Training Comp Graph</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #tutorialAlert {
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f8f9fa;
+        color: #333;
+        padding: 20px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        text-align: center;
+        width: 300px;
+        font-family: Arial, sans-serif;
+        display: block;
+      }
+
+      #closeBtn {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      #closeBtn:hover {
+        background-color: #555;
+      }
+
+      #helpBtn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1001;
+      }
+
+      #helpBtn:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="helpBtn">?</button>
+    <div id="tutorialAlert">
+      <h3>Game Tutorial</h3>
+      <p>Press <strong>R</strong> to Shoot</p>
+      <p>Press <strong>C</strong> to Change Camera</p>
+      <p>Press <strong>Space</strong> to Jump</p>
+      <p>Use <strong>WASD</strong> to Move Around</p>
+      <p>Click The Ball To Change The Color</p>
+      <button id="closeBtn">Got it!</button>
+    </div>
+
+    <script>
+      document.getElementById("helpBtn").addEventListener("click", function () {
+        document.getElementById("tutorialAlert").style.display = "block";
+      });
+
+      document
+        .getElementById("closeBtn")
+        .addEventListener("click", function () {
+          document.getElementById("tutorialAlert").style.display = "none";
+        });
+    </script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
